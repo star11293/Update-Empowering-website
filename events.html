@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Events • Empowering Your Mindset</title>
+<style>
+:root{--bg:#ffffff;--text:#0b1220;--muted:#5b657a;--brand:#0b3b8c;--brand-2:#4f46e5;--card:#f6f8ff;--border:#e6e9f2;--shadow:0 10px 25px rgba(12,36,99,.08)}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+.container{max-width:1120px;margin-inline:auto;padding:0 20px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.site-header{position:sticky;top:0;backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid var(--border);z-index:50;background:rgba(255,255,255,.8)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--text);text-decoration:none}
+.brand-text{font-weight:900}
+.site-nav ul{display:flex;align-items:center;gap:12px;list-style:none;margin:0;padding:0}
+.site-nav a{display:inline-block;padding:8px 12px;border-radius:10px}
+.site-nav a:hover{background:#f5f7ff;text-decoration:none}
+.nav-toggle{display:none;background:none;border:0;cursor:pointer}
+.nav-toggle .bar{display:block;width:24px;height:2px;background:#111;margin:5px 0;border-radius:1px}
+@media (max-width:900px){.site-nav ul{position:absolute;right:16px;top:60px;background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:10px;display:none;flex-direction:column;align-items:flex-start;width:260px}.site-nav ul.open{display:flex}.nav-toggle{display:inline-flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--border);background:#fff;padding:10px 14px;border-radius:12px;cursor:pointer;transition:transform .08s ease, background .15s;box-shadow:none}
+.btn:hover{transform:translateY(-1px)}.btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;border-color:transparent}
+.btn-invert{background:#fff;color:var(--brand);border-color:transparent}.btn-ghost{background:transparent;border-color:transparent}.btn-outline{background:transparent;border-color:var(--border)}
+.btn:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.hero{background:linear-gradient(135deg,var(--brand),#2b51c8 60%,#5b5fe6);color:#fff;padding:64px 0;border-bottom-left-radius:32px;border-bottom-right-radius:32px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:-20%;background:radial-gradient(60% 60% at 70% 20%,rgba(255,255,255,.2),transparent 60%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.hero h1{line-height:1.1;margin:8px 0 6px;font-size:clamp(32px,5vw,56px)}.hero p{max-width:56ch;color:#f0f4ff}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:14px;border-radius:16px;text-align:center}
+.counter{font-weight:900;font-size:clamp(28px,4vw,42px)}
+.hero-media{min-height:260px;border-radius:20px;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.15);display:grid;place-items:center}
+.play{display:inline-flex;gap:8px;align-items:center;color:#fff;background:transparent;border:1px solid rgba(255,255,255,.4);padding:10px 14px;border-radius:12px}
+.section{padding:60px 0}.section.alt{background:#f9fbff}
+.section-head{margin-bottom:20px}.section h2{font-size:clamp(22px,3.2vw,34px);margin:0 0 6px}
+.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:18px}
+.media-card{display:grid;grid-template-columns:120px 1fr;gap:14px}.book-cover{background:linear-gradient(135deg,#e8ecff,#f9fbff);border:1px solid var(--border);border-radius:10px;aspect-ratio:3/4}
+.media-card-body .row{display:flex;gap:8px;flex-wrap:wrap}.hover-reveal{position:relative;transition:transform .18s ease, box-shadow .18s}
+.hover-reveal:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(12,36,99,.12)}.icon{color:var(--brand)}
+.testimonial{max-width:760px;margin:0 auto;text-align:center}
+.testimonial blockquote{font-size:clamp(18px,2.6vw,26px);font-weight:700}.author{color:var(--muted);margin-top:6px}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:12px}.dots button{width:8px;height:8px;border-radius:999px;border:0;background:#d7dcf0;cursor:pointer}.dots button[aria-selected="true"]{background:var(--brand)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.stack label{display:grid;gap:6px;margin:8px 0}.stack input,.stack textarea{border:1px solid var(--border);border-radius:10px;padding:10px 12px;font:inherit;width:100%}
+.muted{color:var(--muted)}.small{font-size:.85rem}.quiz label{display:flex;gap:8px;margin:8px 0}.quiz-result{margin-top:12px;padding:12px;border:1px dashed var(--border);border-radius:12px;min-height:40px}
+.lead-magnet{position:fixed;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.55)}.lead-dialog{background:#fff;border-radius:16px;padding:20px;max-width:620px;width:92%;box-shadow:var(--shadow)}
+.lead-head{display:flex;align-items:center;justify-content:space-between}.close{background:transparent;border:0;font-size:18px;cursor:pointer}
+.page-hero{padding:64px 0;background:linear-gradient(135deg,#f3f6ff,#fff);border-bottom:1px solid var(--border)}.page-hero .lead{color:var(--muted)}.narrow{max-width:800px}
+.list-plain{list-style:none;padding:0;margin:0}.checklist{list-style:none;padding:0}.checklist li{padding-left:28px;position:relative;margin:8px 0}.checklist li::before{content:"✓";color:var(--brand);position:absolute;left:0}
+.site-footer{border-top:1px solid var(--border);padding:24px 0 0;margin-top:40px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1.2fr;gap:20px;padding:20px 0}
+.brand-footer{display:flex;gap:8px;align-items:center}.fineprint{padding:12px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted)}
+.subscribe{display:grid;grid-template-columns:1fr auto;gap:8px}.subscribe input{border:1px solid var(--border);border-radius:10px;padding:10px 12px}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.cards-3{grid-template-columns:1fr}.media-card{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="/index.html" aria-label="Empowering Your Mindset home"><span class="brand-text">Empowering Your Mindset</span></a>
+    <nav class="site-nav" role="navigation" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <ul id="nav-menu">
+        <li><a href="/index.html" >Home</a></li>
+        <li><a href="/about.html" >About</a></li>
+        <li><a href="/services.html" >Services</a></li>
+        <li><a href="/books.html" >Books</a></li>
+        <li><a href="/events.html" style="font-weight:700;">Events</a></li>
+        <li><a href="/contact.html" >Contact</a></li>
+        <li><a class="btn btn-primary" href="/contact.html#booking">Book Speaking</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero"><div class="container narrow"><h1>Events</h1><p class="lead">Where to find Dr. Brown next.</p></div></section>
+<section class="section"><div class="container cards-3">
+<article class="card" id="nyc"><h3>LeadSummit NYC</h3><p>Oct 18, 2025 • 10:00 AM ET</p><a class="btn btn-primary" href="#">Reserve seat</a></article>
+<article class="card" id="chi"><h3>GrowthConf Chicago</h3><p>Oct 19, 2025 • 10:00 AM ET</p><a class="btn btn-primary" href="#">Reserve seat</a></article>
+<article class="card" id="pol"><h3>PeopleOps Live</h3><p>Oct 20, 2025 • 10:00 AM ET</p><a class="btn btn-primary" href="#">Reserve seat</a></article>
+</div></section>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-grid">
+    <div><div class="brand-footer"><strong>Empowering Your Mindset</strong></div><p>Tools, talks, and coaching to lead with clarity and trust.</p></div>
+    <div><h4>Quick Links</h4><ul class="list-plain"><li><a href="/services.html">Services</a></li><li><a href="/books.html">Books</a></li><li><a href="/events.html">Events</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+    <div><h4>Subscribe</h4><form class="subscribe" data-enhance="true"><label class="sr-only" for="sub-email">Email</label><input id="sub-email" type="email" placeholder="you@company.com" required><button class="btn">Join</button><p class="small muted">No spam. Unsubscribe anytime.</p></form></div>
+  </div>
+  <div class="container fineprint"><small>© 2025 Dr. Andrew Brown. All rights reserved.</small></div>
+</footer>
+<script>
+(function(){const t=document.querySelector('.nav-toggle'),e=document.getElementById('nav-menu');t&&e&&t.addEventListener('click',()=>{const n=e.classList.toggle('open');t.setAttribute('aria-expanded',String(n))})})();
+(function(){const t=document.querySelectorAll('.counter'),e=new IntersectionObserver(s=>{s.forEach(o=>{if(o.isIntersecting){const n=o.target,r=Number(n.getAttribute('data-target')),a=performance.now(),i=900,c=u=>{const l=Math.min(1,(u-a)/i);n.textContent=Math.floor(r*l).toLocaleString(),l<1&&requestAnimationFrame(c)};requestAnimationFrame(c),e.unobserve(n)}})},{threshold:.25});t.forEach(s=>e.observe(s))})();
+(function(){const e=document.querySelector('[data-lead]');document.querySelectorAll('[data-open-lead]').forEach(t=>t.addEventListener('click',()=>e?.removeAttribute('hidden')));document.querySelectorAll('[data-close-lead]').forEach(t=>t.addEventListener('click',()=>e?.setAttribute('hidden','')));e&&e.addEventListener('click',t=>{t.target===e&&e.setAttribute('hidden','')})})();
+(function(){const t=[{q:"Dr. Brown reframed how our leaders think.",a:"VP, Fortune 500 Retail"},{q:"Powerful, actionable, unforgettable.",a:"Conference Chair, LeadSummit"},{q:"Our teams deliver more with less stress.",a:"HR Director, Tech Scaleup"}],e=document.getElementById('testimonial-quote'),n=document.getElementById('testimonial-author'),r=document.querySelectorAll('.dots button');let a=0;function i(o){const s=t[o];e&&n&&(e.textContent=`“${s.q}”`,n.textContent=`— ${s.a}`),r.forEach((u,c)=>u.setAttribute('aria-selected',String(c===o)))}r.forEach(o=>o.addEventListener('click',()=>{a=Number(o.dataset.idx),i(a)})),setInterval(()=>{a=(a+1)%t.length,i(a)},3500),i(0)})();
+(function(){document.querySelectorAll('form[data-enhance="true"]').forEach(t=>{t.addEventListener('submit',e=>{e.preventDefault(),t.innerHTML='<p>Thanks for subscribing! Please check your email.</p>'})})})();
+(function(){const e=document.querySelector('[data-quiz]');if(!e)return;const t=e.querySelector('.quiz-result'),n=e.querySelector('[data-quiz-result]');n?.addEventListener('click',()=>{const r=new FormData(e).get('q1');let a;r==='a'?a={title:'Growth Mindset',tip:'Double down on deliberate practice and micro-goals.'}:r==='b'?a={title:'Clarity Seeker',tip:'Define success metrics and set weekly check-ins.'}:r==='c'&&(a={title:'Momentum Builder',tip:'Use a two-minute rule to overcome friction.'}),r?t.innerHTML=`<strong>Your style:</strong> ${a.title}<br><span class="muted">Coach tip: ${a.tip}</span>`:t.textContent='Please choose an option.'})})();
+</script>
+</body>
+</html>
