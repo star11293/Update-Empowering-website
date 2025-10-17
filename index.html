@@ -1,3 +1,4 @@
+```html name=index.html url=https://github.com/star11293/Update-Empowering-website/blob/ad288937d759808233f893dbf9c4ea544ec865f8/index.html
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,8 +20,12 @@ a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
 .site-nav a:hover{background:#f5f7ff;text-decoration:none}
 .nav-toggle{display:none;background:none;border:0;cursor:pointer}
 .nav-toggle .bar{display:block;width:24px;height:2px;background:#111;margin:5px 0;border-radius:1px}
-@media (max-width:900px){.site-nav ul{position:absolute;right:16px;top:60px;background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:10px;display:none;flex-direction:column;align-items:flex-start;width:260px}.site-nav ul.open{display:flex}.nav-toggle{display:inline-flex}}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--border);background:#fff;padding:10px 14px;border-radius:12px;cursor:pointer;transition:transform .08s ease, background .15s;box-shadow:none}
+@media (max-width:900px){
+  .nav-toggle{display:block}
+  .site-nav ul{position:absolute;right:16px;top:60px;background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:10px;display:none;flex-direction:column}
+  .site-nav ul.open{display:flex}
+}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--border);background:#fff;padding:10px 14px;border-radius:12px;cursor:pointer;transition:transform .08s ease}
 .btn:hover{transform:translateY(-1px)}.btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;border-color:transparent}
 .btn-invert{background:#fff;color:var(--brand);border-color:transparent}.btn-ghost{background:transparent;border-color:transparent}.btn-outline{background:transparent;border-color:var(--border)}
 .btn:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
@@ -43,14 +48,16 @@ a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
 .hover-reveal:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(12,36,99,.12)}.icon{color:var(--brand)}
 .testimonial{max-width:760px;margin:0 auto;text-align:center}
 .testimonial blockquote{font-size:clamp(18px,2.6vw,26px);font-weight:700}.author{color:var(--muted);margin-top:6px}
-.dots{display:flex;gap:8px;justify-content:center;margin-top:12px}.dots button{width:8px;height:8px;border-radius:999px;border:0;background:#d7dcf0;cursor:pointer}.dots button[aria-selected="true"]{background:var(--brand)}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:12px}.dots button{width:8px;height:8px;border-radius:999px;border:0;background:#d7dcf0;cursor:pointer}.dots button[aria-selected="true"]{background:#ffffff}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .stack label{display:grid;gap:6px;margin:8px 0}.stack input,.stack textarea{border:1px solid var(--border);border-radius:10px;padding:10px 12px;font:inherit;width:100%}
-.muted{color:var(--muted)}.small{font-size:.85rem}.quiz label{display:flex;gap:8px;margin:8px 0}.quiz-result{margin-top:12px;padding:12px;border:1px dashed var(--border);border-radius:12px;min-height:40px}
-.lead-magnet{position:fixed;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.55)}.lead-dialog{background:#fff;border-radius:16px;padding:20px;max-width:620px;width:92%;box-shadow:var(--shadow)}
+.muted{color:var(--muted)}.small{font-size:.85rem}.quiz label{display:flex;gap:8px;margin:8px 0}.quiz-result{margin-top:12px;padding:12px;border:1px dashed var(--border);border-radius:12px;min-height:48px}
+.lead-magnet{position:fixed;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.55)}
+.lead-magnet[hidden]{display:none}
+.lead-dialog{background:#fff;border-radius:16px;padding:20px;max-width:620px;width:92%;box-shadow:0 15px 45px rgba(12,36,99,.15)}
 .lead-head{display:flex;align-items:center;justify-content:space-between}.close{background:transparent;border:0;font-size:18px;cursor:pointer}
 .page-hero{padding:64px 0;background:linear-gradient(135deg,#f3f6ff,#fff);border-bottom:1px solid var(--border)}.page-hero .lead{color:var(--muted)}.narrow{max-width:800px}
-.list-plain{list-style:none;padding:0;margin:0}.checklist{list-style:none;padding:0}.checklist li{padding-left:28px;position:relative;margin:8px 0}.checklist li::before{content:"✓";color:var(--brand);position:absolute;left:0}
+.list-plain{list-style:none;padding:0;margin:0}.checklist{list-style:none;padding:0}.checklist li{padding-left:28px;position:relative;margin:8px 0}.checklist li::before{content:"✓";color:var(--brand);position:absolute;left:0;top:0}
 .site-footer{border-top:1px solid var(--border);padding:24px 0 0;margin-top:40px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1.2fr;gap:20px;padding:20px 0}
 .brand-footer{display:flex;gap:8px;align-items:center}.fineprint{padding:12px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted)}
 .subscribe{display:grid;grid-template-columns:1fr auto;gap:8px}.subscribe input{border:1px solid var(--border);border-radius:10px;padding:10px 12px}
@@ -64,7 +71,7 @@ a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
     <a class="brand" href="/index.html" aria-label="Empowering Your Mindset home"><span class="brand-text">Empowering Your Mindset</span></a>
     <nav class="site-nav" role="navigation" aria-label="Primary">
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-      <ul id="nav-menu">
+      <ul id="nav-menu" aria-hidden="false">
         <li><a href="/index.html" style="font-weight:700;">Home</a></li>
         <li><a href="/about.html" >About</a></li>
         <li><a href="/services.html" >Services</a></li>
@@ -85,7 +92,7 @@ a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
       <p>Coaching, speaking, and leadership programs that turn insight into action—so teams perform with clarity, courage, and trust.</p>
       <div class="cta-row">
         <a class="btn btn-invert" href="/contact.html#booking">Book Dr. Brown</a>
-        <button class="btn btn-ghost" data-open-lead>Get the Free Guide</button>
+        <button class="btn btn-ghost" data-open-lead type="button">Get the Free Guide</button>
         <a class="btn btn-outline" href="#reel">Watch 60s Reel</a>
       </div>
       <div class="stats">
@@ -95,7 +102,7 @@ a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
       </div>
     </div>
     <div class="hero-media" id="reel" aria-label="Hero video placeholder">
-      <button class="play">▶ Hero Video</button>
+      <button class="play" type="button">▶ Hero Video</button>
     </div>
   </div>
 </section>
@@ -113,9 +120,9 @@ a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
   <div class="container">
     <header class="section-head"><h2>Books</h2><p>Practical tools for a resilient, high-trust mindset.</p></header>
     <div class="cards-3">
-      <article class="card media-card"><div class="book-cover"></div><div class="media-card-body"><h3>Mindset Lever 1</h3><p>Short subtitle that teases a transformation.</p><div class="row"><a class="btn btn-primary" href="/books.html#lever1">Buy</a><a class="btn btn-outline" href="/books.html#lever1">Preview</a></div></div></article>
-      <article class="card media-card"><div class="book-cover"></div><div class="media-card-body"><h3>Mindset Lever 2</h3><p>Short subtitle that teases a transformation.</p><div class="row"><a class="btn btn-primary" href="/books.html#lever2">Buy</a><a class="btn btn-outline" href="/books.html#lever2">Preview</a></div></div></article>
-      <article class="card media-card"><div class="book-cover"></div><div class="media-card-body"><h3>Mindset Lever 3</h3><p>Short subtitle that teases a transformation.</p><div class="row"><a class="btn btn-primary" href="/books.html#lever3">Buy</a><a class="btn btn-outline" href="/books.html#lever3">Preview</a></div></div></article>
+      <article class="card media-card"><div class="book-cover" aria-hidden="true"></div><div class="media-card-body"><h3>Mindset Lever 1</h3><p>Short subtitle that teases a transformation.</p><div class="row"><a class="btn btn-outline" href="/books.html#lever1">Details</a></div></div></article>
+      <article class="card media-card"><div class="book-cover" aria-hidden="true"></div><div class="media-card-body"><h3>Mindset Lever 2</h3><p>Short subtitle that teases a transformation.</p><div class="row"><a class="btn btn-outline" href="/books.html#lever2">Details</a></div></div></article>
+      <article class="card media-card"><div class="book-cover" aria-hidden="true"></div><div class="media-card-body"><h3>Mindset Lever 3</h3><p>Short subtitle that teases a transformation.</p><div class="row"><a class="btn btn-outline" href="/books.html#lever3">Details</a></div></div></article>
     </div>
   </div>
 </section>
@@ -136,9 +143,9 @@ a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
       <blockquote id="testimonial-quote">“Dr. Brown reframed how our leaders think.”</blockquote>
       <div id="testimonial-author" class="author">— VP, Fortune 500 Retail</div>
       <div class="dots" aria-label="Testimonials" role="tablist">
-        <button role="tab" aria-controls="testimonial-1" aria-selected="true" data-idx="0"></button>
-        <button role="tab" aria-controls="testimonial-2" aria-selected="false" data-idx="1"></button>
-        <button role="tab" aria-controls="testimonial-3" aria-selected="false" data-idx="2"></button>
+        <button role="tab" aria-controls="testimonial-1" aria-selected="true" data-idx="0" type="button"></button>
+        <button role="tab" aria-controls="testimonial-2" aria-selected="false" data-idx="1" type="button"></button>
+        <button role="tab" aria-controls="testimonial-3" aria-selected="false" data-idx="2" type="button"></button>
       </div>
     </div>
   </div>
@@ -161,7 +168,7 @@ a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
         <label><input type="radio" name="q1" value="a"> Identify skill gaps and run a quick practice cycle.</label>
         <label><input type="radio" name="q1" value="b"> Re-align on outcomes and clarify what ‘good’ looks like.</label>
         <label><input type="radio" name="q1" value="c"> Ship a tiny win to restore momentum and morale.</label>
-        <div class="row">
+        <div class="row" style="margin-top:8px;">
           <button class="btn" type="button" data-quiz-result>See Result</button>
           <a class="btn btn-outline" href="/contact.html#assessment">Get Full Assessment</a>
         </div>
@@ -172,9 +179,16 @@ a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
 </section>
 <div class="lead-magnet" data-lead hidden>
   <div class="lead-dialog" role="dialog" aria-modal="true" aria-labelledby="lead-title">
-    <div class="lead-head"><h3 id="lead-title">Free Guide: 7 Mindset Levers for High-Trust Leadership</h3><button class="close" data-close-lead aria-label="Close">✕</button></div>
+    <div class="lead-head"><h3 id="lead-title">Free Guide: 7 Mindset Levers for High-Trust Leadership</h3><button class="close" data-close-lead aria-label="Close" type="button">✕</button></div>
     <p>Enter your email to receive the PDF and occasional insights from Dr. Brown.</p>
-    <form class="row" action="https://formspree.io/f/your-id" method="POST"><label class="sr-only" for="lead-email">Email</label><input id="lead-email" type="email" name="email" placeholder="you@company.com" required><button class="btn btn-primary" type="submit">Send me the guide</button></form>
+    <form class="row" action="https://formspree.io/f/your-id" method="POST">
+      <label class="sr-only" for="lead-email">Email</label>
+      <input id="lead-email" type="email" name="email" placeholder="you@company.com" required style="width:100%;margin-bottom:8px;padding:10px;border-radius:8px;border:1px solid var(--border)">
+      <div style="display:flex;gap:8px;">
+        <button class="btn btn-primary" type="submit">Send me the guide</button>
+        <button class="btn" type="button" data-close-lead>Close</button>
+      </div>
+    </form>
     <p class="muted small">No spam. Unsubscribe anytime.</p>
   </div>
 </div>
@@ -184,17 +198,152 @@ a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
   <div class="container footer-grid">
     <div><div class="brand-footer"><strong>Empowering Your Mindset</strong></div><p>Tools, talks, and coaching to lead with clarity and trust.</p></div>
     <div><h4>Quick Links</h4><ul class="list-plain"><li><a href="/services.html">Services</a></li><li><a href="/books.html">Books</a></li><li><a href="/events.html">Events</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
-    <div><h4>Subscribe</h4><form class="subscribe" data-enhance="true"><label class="sr-only" for="sub-email">Email</label><input id="sub-email" type="email" placeholder="you@company.com" required><button class="btn">Join</button><p class="small muted">No spam. Unsubscribe anytime.</p></form></div>
+    <div><h4>Subscribe</h4><form class="subscribe" data-enhance="true" action="https://formspree.io/f/your-id" method="POST"><label class="sr-only" for="sub-email">Email</label><input id="sub-email" type="email" placeholder="you@company.com" required><button class="btn btn-primary" type="submit">Subscribe</button></form></div>
   </div>
   <div class="container fineprint"><small>© 2025 Dr. Andrew Brown. All rights reserved.</small></div>
 </footer>
+
 <script>
-(function(){const t=document.querySelector('.nav-toggle'),e=document.getElementById('nav-menu');t&&e&&t.addEventListener('click',()=>{const n=e.classList.toggle('open');t.setAttribute('aria-expanded',String(n))})})();
-(function(){const t=document.querySelectorAll('.counter'),e=new IntersectionObserver(s=>{s.forEach(o=>{if(o.isIntersecting){const n=o.target,r=Number(n.getAttribute('data-target')),a=performance.now(),i=900,c=u=>{const l=Math.min(1,(u-a)/i);n.textContent=Math.floor(r*l).toLocaleString(),l<1&&requestAnimationFrame(c)};requestAnimationFrame(c),e.unobserve(n)}})},{threshold:.25});t.forEach(s=>e.observe(s))})();
-(function(){const e=document.querySelector('[data-lead]');document.querySelectorAll('[data-open-lead]').forEach(t=>t.addEventListener('click',()=>e?.removeAttribute('hidden')));document.querySelectorAll('[data-close-lead]').forEach(t=>t.addEventListener('click',()=>e?.setAttribute('hidden','')));e&&e.addEventListener('click',t=>{t.target===e&&e.setAttribute('hidden','')})})();
-(function(){const t=[{q:"Dr. Brown reframed how our leaders think.",a:"VP, Fortune 500 Retail"},{q:"Powerful, actionable, unforgettable.",a:"Conference Chair, LeadSummit"},{q:"Our teams deliver more with less stress.",a:"HR Director, Tech Scaleup"}],e=document.getElementById('testimonial-quote'),n=document.getElementById('testimonial-author'),r=document.querySelectorAll('.dots button');let a=0;function i(o){const s=t[o];e&&n&&(e.textContent=`“${s.q}”`,n.textContent=`— ${s.a}`),r.forEach((u,c)=>u.setAttribute('aria-selected',String(c===o)))}r.forEach(o=>o.addEventListener('click',()=>{a=Number(o.dataset.idx),i(a)})),setInterval(()=>{a=(a+1)%t.length,i(a)},3500),i(0)})();
-(function(){document.querySelectorAll('form[data-enhance="true"]').forEach(t=>{t.addEventListener('submit',e=>{e.preventDefault(),t.innerHTML='<p>Thanks for subscribing! Please check your email.</p>'})})})();
-(function(){const e=document.querySelector('[data-quiz]');if(!e)return;const t=e.querySelector('.quiz-result'),n=e.querySelector('[data-quiz-result]');n?.addEventListener('click',()=>{const r=new FormData(e).get('q1');let a;r==='a'?a={title:'Growth Mindset',tip:'Double down on deliberate practice and micro-goals.'}:r==='b'?a={title:'Clarity Seeker',tip:'Define success metrics and set weekly check-ins.'}:r==='c'&&(a={title:'Momentum Builder',tip:'Use a two-minute rule to overcome friction.'}),r?t.innerHTML=`<strong>Your style:</strong> ${a.title}<br><span class="muted">Coach tip: ${a.tip}</span>`:t.textContent='Please choose an option.'})})();
+/*
+  Rebuilt script: fixes modal open/close (including the exit/close buttons),
+  and provides small helpers for nav toggle, counters, testimonials, forms, and quiz.
+*/
+(function(){
+  // NAV TOGGLE
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      const opened = navMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', opened ? 'true' : 'false');
+      navMenu.setAttribute('aria-hidden', opened ? 'false' : 'true');
+    });
+  }
+
+  // SIMPLE COUNTER (animates when visible)
+  const counters = document.querySelectorAll('.counter');
+  if ('IntersectionObserver' in window && counters.length) {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = Number(el.getAttribute('data-target') || 0);
+          const start = 0;
+          const duration = 1200;
+          let startTime = null;
+          function step(timestamp){
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            el.textContent = Math.floor(progress * (target - start) + start);
+            if (progress < 1) requestAnimationFrame(step);
+            else el.textContent = String(target);
+          }
+          requestAnimationFrame(step);
+          obs.unobserve(el);
+        }
+      });
+    }, {threshold: 0.4});
+    counters.forEach(c => obs.observe(c));
+  } else {
+    // Fallback: set targets immediately
+    counters.forEach(c => c.textContent = c.getAttribute('data-target') || '0');
+  }
+
+  // LEAD MAGNET MODAL: open, close, click outside, escape key
+  const lead = document.querySelector('[data-lead]');
+  const openBtns = document.querySelectorAll('[data-open-lead]');
+  const closeBtns = document.querySelectorAll('[data-close-lead]');
+  function openLead() {
+    if (!lead) return;
+    lead.removeAttribute('hidden');
+    document.body.style.overflow = 'hidden';
+    // focus the email input if present
+    const email = lead.querySelector('#lead-email');
+    setTimeout(() => { email?.focus(); }, 50);
+  }
+  function closeLead() {
+    if (!lead) return;
+    lead.setAttribute('hidden', '');
+    document.body.style.overflow = '';
+    // restore focus to first open button if possible
+    const opener = document.querySelector('[data-open-lead]');
+    opener?.focus();
+  }
+  openBtns.forEach(b => b.addEventListener('click', (ev) => { ev.preventDefault(); openLead(); }));
+  closeBtns.forEach(b => b.addEventListener('click', (ev) => { ev.preventDefault(); closeLead(); }));
+
+  // click on backdrop to close (only if click is outside dialog)
+  if (lead) {
+    lead.addEventListener('click', (ev) => {
+      // if target is the lead container (backdrop) or outside the dialog, close
+      const dialog = lead.querySelector('.lead-dialog');
+      if (!dialog) return;
+      if (ev.target === lead) closeLead();
+      // also if click outside dialog element
+      if (!dialog.contains(ev.target)) closeLead();
+    });
+    // Escape key to close
+    document.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Escape' && !lead.hasAttribute('hidden')) closeLead();
+    });
+  }
+
+  // TESTIMONIAL ROTATOR
+  (function(){
+    const quotes = [
+      {q:"Dr. Brown reframed how our leaders think.", a:"— VP, Fortune 500 Retail"},
+      {q:"Powerful, actionable, unforgettable.", a:"— Conference Chair, LeadSummit"},
+      {q:"Our teams deliver more with less friction.", a:"— Head of People Ops, Tech Scaleup"}
+    ];
+    const quoteEl = document.getElementById('testimonial-quote');
+    const authorEl = document.getElementById('testimonial-author');
+    const dots = document.querySelectorAll('.dots button');
+    let idx = 0;
+    function render(i){
+      const item = quotes[i % quotes.length];
+      if (quoteEl) quoteEl.textContent = `“${item.q}”`;
+      if (authorEl) authorEl.textContent = item.a;
+      dots.forEach(d => d.setAttribute('aria-selected', d.dataset.idx === String(i)));
+    }
+    render(idx);
+    dots.forEach(btn => btn.addEventListener('click', () => {
+      idx = Number(btn.dataset.idx) || 0;
+      render(idx);
+    }));
+    setInterval(() => { idx = (idx + 1) % quotes.length; render(idx); }, 6000);
+  })();
+
+  // ENHANCE SIMPLE FORMS (data-enhance) - show thank you message instead of real submit for demo
+  document.querySelectorAll('form[data-enhance="true"]').forEach(form => {
+    form.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      form.innerHTML = '<p>Thanks for subscribing! Please check your email.</p>';
+    });
+  });
+
+  // QUIZ result
+  (function(){
+    const quiz = document.querySelector('[data-quiz]');
+    if (!quiz) return;
+    const resultEl = quiz.querySelector('.quiz-result');
+    const btn = quiz.querySelector('[data-quiz-result]');
+    btn?.addEventListener('click', () => {
+      const choice = quiz.querySelector('input[name="q1"]:checked');
+      if (!choice) {
+        resultEl.textContent = 'Please pick an option to see your result.';
+        return;
+      }
+      const val = choice.value;
+      let text = '';
+      if (val === 'a') text = 'You focus on skill development — great for team capability growth.';
+      else if (val === 'b') text = 'You align outcomes — strong systems thinking for clarity and direction.';
+      else if (val === 'c') text = 'You seek momentum — practical leadership focused on quick wins.';
+      resultEl.textContent = text;
+    });
+  })();
+
+})();
 </script>
 </body>
 </html>
+```
